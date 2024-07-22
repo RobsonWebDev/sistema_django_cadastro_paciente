@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.input{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.last-input {
+    margin-top: 1rem;
+    width: 10rem;
+}
