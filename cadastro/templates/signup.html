@@ -3,7 +3,7 @@
 {% block content-main %}
 
 <main class='main-cr'>
-    <form action="{% url "signup" %}" method="POST">
+    <form action="{% url "signup" %}" method="POST" class='main-cr'>
         {% csrf_token %}
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Email</label>
@@ -15,6 +15,5 @@
         </div>
         <input type="submit" value="Cadastrar" class="input btn btn-primary last-input">
     </form>
-
 </main> 
 {% endblock content-main %}
