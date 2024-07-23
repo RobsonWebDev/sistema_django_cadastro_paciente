@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 
 {% block content-main %}
-
-<main class='main-cr'>
-    <form action="{% url "signup" %}" method="POST" class='main-cr'>
-        {% csrf_token %}
-        <label for="inputEmail4" >
-            <input type="email" class="input" id="inputEmail4" name="email" placeholder="Email">
-        </label>
-        <label for="inputPassword4">
-            <input type="password" class="input" id="inputPassword4" name="pass" placeholder="Senha">
-        </label>
-        <input type="submit" value="Cadastrar" class="input btn">
-    </form>
-</main> 
+    {% if mensagens %}
+        {% for mensagem in mensagens %}
+        <div></div>
+        {% endfor %}
+    {% endif %}
+    <main class='main-cr'>
+        <form action="{% url "signup" %}" method="POST" class='main-cr'>
+            {% csrf_token %}
+            <label for="inputEmail4" >
+                <input type="email" class="input" id="inputEmail4" name="email" placeholder="Email">
+            </label>
+            <label for="inputPassword4">
+                <input type="password" class="input" id="inputPassword4" name="pass" placeholder="Senha">
+            </label>
+            <input type="submit" value="Cadastrar" class="btn">
+        </form>
+    </main> 
 {% endblock content-main %}

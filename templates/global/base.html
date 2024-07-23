@@ -4,16 +4,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <title>Bootstrap demo</title>
+    <title>{{ titulo }}</title>
   </head>
   <body>
     <header class='display'>
-      <button><a href="">Solicite uma Demostração</a></button>
+      {% block content-header %}      
+        <button class="btn-h"><a href="">Solicite uma Demostração</a></button>
 
-      <label for="pesquisar">
-        <input type="search" name="search" id="pesquisar">
-      </label>
+        <label for="pesquisar">
+          <a href=""><i class="fa-solid fa-magnifying-glass fa-2x" style="color: #c9c9c9;"></i></a>
+
+          
+
+          <input type="search" name="search" id="pesquisar" class="btn-h dis-no">
+        </label>
+      {% endblock content-header %}
     </header>
 
     {% block content-main %}
