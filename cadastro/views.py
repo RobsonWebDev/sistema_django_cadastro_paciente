@@ -8,7 +8,7 @@ from django.http import HttpResponse
 
 
 def login(request):
-    if request.method == 'Get':
+    if request.method == 'GET':
         return render(request, 'login.html')
     
     if request.method == 'POST':
@@ -27,8 +27,8 @@ def login(request):
 
 
 def signup(request):
-    if request.method == 'Get':
-        return redirect(reverse('signup'))
+    if request.method == 'GET':
+        return render(request, 'signup.html')
     if request.method == 'POST':
         username = request.POST.get('email')
         password = request.POST.get('pass')
