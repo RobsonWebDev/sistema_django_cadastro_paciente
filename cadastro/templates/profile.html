@@ -1,9 +1,39 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content-header %}
 
 {% endblock content-header %}
 
 {% block content-main %}
-<h1>Profile</h1>
-<a class="btn" href="{% url "logout" %}">logout</a>
+<header class="header-profile">
+    <div><img src={% static 'img/logo.png' %} alt="carebuddy" class="logo"></div>
+    <div>
+        <label for="pesquisar">
+            <input type="search" name="pesquisar" id="pesquisar" class="pesquisa" placeholder="Digite o Protocolo">
+        </label>
+        <input type="submit" value="PES" class='pes' >
+    </div>
+    <nav class="nav-menu">
+        
+        <div class="nav-div">
+            <div class="perfil">
+                <h3>Nome Completo</h3>
+                <div class="img-perfil"></div>
+            </div>
+            <ul class="list-perfil">
+                <li><a href="#" >Meu perfil</a></li>
+                <li><a href="#" >Pagamentos</a></li>
+                <li><a href="#" >Clientes</a></li>
+                <li>
+                    <a class="btn" href="{% url "logout" %}">logout</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+</header>
+<aside class="form-main">
+    <section class="form-get-main"></section>
+    <section class="form-get-date"></section>
+</aside>
 {% endblock content-main %}

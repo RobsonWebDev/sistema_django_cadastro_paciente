@@ -4,9 +4,8 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    text-align: center;
     color: #f2f2f2;
-    font-size: 62,5%;
+    font-size: 62.5%;
 }
 
 body {
@@ -22,7 +21,7 @@ header {
 
 .img-logo {
     background-image: url(../img/logo.png);
-    background-position: top;
+    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     height: 5rem;

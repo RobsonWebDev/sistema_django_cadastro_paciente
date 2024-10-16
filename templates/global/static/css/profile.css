@@ -1,0 +1,88 @@
+.header-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;   
+    align-items: center;
+
+}
+
+
+
+.logo {
+    width: 15rem;
+} 
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.pesquisa {
+    height: 2rem;
+    width: 20rem;
+    border-radius: .4rem;
+    background-color: rgba(240, 248, 255, 0.5);
+
+    border: none;
+
+    font-size: 1.2rem;
+}
+
+.pes {
+    color: orangered;
+    border-radius: 50%;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.pes:hover{
+    cursor: pointer;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+}
+
+.img-perfil{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.74);
+}
+
+.list-perfil{
+    display: none;
+}
+
+.form-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    height: 32rem;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.form-get-main {
+    height: 100%;
+    width: 62rem;
+    border-radius: 1.5rem;
+    background-color: rgba(240, 248, 255, 0.5);
+}
+
+.form-get-date {
+    height: 100%;
+    width: 25rem;
+    border-radius: 1.5rem;
+    background-color: rgba(240, 248, 255, 0.5);
+}

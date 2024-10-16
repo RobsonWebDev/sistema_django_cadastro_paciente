@@ -12,9 +12,6 @@ def login(request):
 
     context = {
         'titulo': 'Login',
-        'mensagens':{
-            'erro': 'Email/Senha Inválidos!'
-        }
     }
 
     if request.method == 'GET':
@@ -40,10 +37,6 @@ def signup(request):
 
     context = {
         'titulo': 'Cadastro',
-        'mensagens':{
-            'sucesso': "Usuário cadastrado com sucesso!",
-            'erro': 'Digite um email valido!'
-        }
     }
 
     if request.method == 'GET':
@@ -53,11 +46,6 @@ def signup(request):
         username = request.POST.get('email')
         password = request.POST.get('pass')
         user = User.objects.create_user(username=username,email=username, password=password)
-
-        if user.is_exist():
-            return redirect(reverse('login'))
-
-        return redirect(reverse('login'))
     
     return render(request, 'signup.html', context)
 
